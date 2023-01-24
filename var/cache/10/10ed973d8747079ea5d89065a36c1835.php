@@ -66,7 +66,7 @@ class __TwigTemplate_78ed03409f4e7d264281ecb54b744786 extends Template
         ";
         // line 24
         $this->displayBlock('content', $context, $blocks);
-        // line 37
+        // line 36
         echo "    </div>
 
 
@@ -121,17 +121,16 @@ class __TwigTemplate_78ed03409f4e7d264281ecb54b744786 extends Template
                 // line 30
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "content", [], "any", false, false, false, 30), "html", null, true);
                 echo "/p>
-
                         </div>
                     ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 34
+            // line 33
             echo "                ";
         }
-        // line 35
+        // line 34
         echo "            </div>
         ";
     }
@@ -148,7 +147,7 @@ class __TwigTemplate_78ed03409f4e7d264281ecb54b744786 extends Template
 
     public function getDebugInfo()
     {
-        return array (  135 => 35,  132 => 34,  122 => 30,  118 => 29,  115 => 28,  110 => 27,  108 => 26,  105 => 25,  101 => 24,  83 => 8,  79 => 7,  70 => 37,  68 => 24,  65 => 23,  63 => 7,  60 => 6,  56 => 5,  49 => 3,  38 => 1,);
+        return array (  134 => 34,  131 => 33,  122 => 30,  118 => 29,  115 => 28,  110 => 27,  108 => 26,  105 => 25,  101 => 24,  83 => 8,  79 => 7,  70 => 36,  68 => 24,  65 => 23,  63 => 7,  60 => 6,  56 => 5,  49 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -183,7 +182,6 @@ class __TwigTemplate_78ed03409f4e7d264281ecb54b744786 extends Template
                         <div>
                             <p>{{ item.title }}</p>
                             <p><{{ item.content }}/p>
-
                         </div>
                     {% endfor %}
                 {% endif %}

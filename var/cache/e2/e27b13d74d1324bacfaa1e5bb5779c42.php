@@ -57,10 +57,10 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
         // line 6
         echo "    <div id=\"form-addArticle\">
         <form action=\"/index.php?c=article&a=add-article\" method=\"post\" enctype=\"multipart/form-data\">
-            <div>
-                <label for=\"title\">Titre de l'article</label>
-                <input type=\"text\" name=\"title\" id=\"title\">
-            </div>
+                <div>
+                    <label for=\"title\">Titre de l'article</label>
+                    <input type=\"text\" name=\"title\" id=\"title\">
+                </div>
 
             <div>
                 <label class=\"editor\" for=\"content\">Contenu:</label>
@@ -98,10 +98,10 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
 {% block body %}
     <div id=\"form-addArticle\">
         <form action=\"/index.php?c=article&a=add-article\" method=\"post\" enctype=\"multipart/form-data\">
-            <div>
-                <label for=\"title\">Titre de l'article</label>
-                <input type=\"text\" name=\"title\" id=\"title\">
-            </div>
+                <div>
+                    <label for=\"title\">Titre de l'article</label>
+                    <input type=\"text\" name=\"title\" id=\"title\">
+                </div>
 
             <div>
                 <label class=\"editor\" for=\"content\">Contenu:</label>

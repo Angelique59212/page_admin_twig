@@ -36,7 +36,7 @@ class __TwigTemplate_b3a55d9239c20afd610b42c9a98ac0fd extends Template
         // line 1
         if (array_key_exists("items", $context)) {
             // line 2
-            echo "        ";
+            echo "    ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 2, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
@@ -46,13 +46,13 @@ class __TwigTemplate_b3a55d9239c20afd610b42c9a98ac0fd extends Template
                 // line 4
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "title", [], "any", false, false, false, 4), "html", null, true);
                 echo "</p>
-            <p>";
+            <p><";
                 // line 5
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "content", [], "any", false, false, false, 5), "html", null, true);
-                echo "</p>
+                echo "/p>
 
         </div>
-        ";
+    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
@@ -78,13 +78,13 @@ class __TwigTemplate_b3a55d9239c20afd610b42c9a98ac0fd extends Template
     public function getSourceContext()
     {
         return new Source("{% if items is defined %}
-        {% for item in items %}
+    {% for item in items %}
         <div>
             <p>{{ item.title }}</p>
-            <p>{{ item.content }}</p>
+            <p><{{ item.content }}/p>
 
         </div>
-        {% endfor %}
+    {% endfor %}
 {% endif %}", "_partials/_unordered_list.html.twig", "/home/angelika/PhpstormProjects/page_admin_twig/templates/_partials/_unordered_list.html.twig");
     }
 }
