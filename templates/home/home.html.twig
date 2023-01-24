@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page Administrateur {% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% block sidebar %}
+            <div class="sidebar">
+                <h1>Menu principal</h1>
+                <h2>Posts</h2>
+                <h2>Publiés</h2>
+                <h2>Brouillons</h2>
+                <h2>Planifiés</h2>
+                <h2>Corbeille</h2>
+            </div>
+            <div class="sidebar">
+                <h2>Gérer</h2>
+                <h2>Catégories</h2>
+            </div>
+        {% endblock %}
+    </div>
+
+    {% block content %}
+        <div class="article">
+
+        </div>
+    {% endblock %}
+
+
+{% endblock %}
+

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 1.3rem;
+}
+
+.container {
+    width: 100rem;
+}
+
+.sidebar {
+    min-height: 100vh;
+    color: white;
+    background-color: #313030;
+    width: 20rem;
+}
