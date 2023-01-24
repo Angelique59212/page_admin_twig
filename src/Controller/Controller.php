@@ -50,4 +50,31 @@ abstract class Controller
     {
         return self::$twigLoader;
     }
+
+    /**
+     *Return a form field value or default
+     * @param string $field
+     * @param $default
+     * @return mixed|string
+     */
+    public function getFormField(string $field, $default = null): mixed
+    {
+        if (!isset($_POST[$field])) {
+            return (null === $default) ? '' : $default;
+        }
+
+        return $_POST[$field];
+    }
+
+    /**
+     * sanitize data
+     * @param $data
+     * @return string
+     */
+    public function dataClean($data): string
+    {
+        $data = trim(strip_tags($data));
+        $data = stripslashes($data);
+        return htmlspecialchars($data);
+    }
 }

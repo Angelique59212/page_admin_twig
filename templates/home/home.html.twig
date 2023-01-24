@@ -6,25 +6,29 @@
     <div class="container">
         {% block sidebar %}
             <div class="sidebar">
-                <h1>Menu principal</h1>
-                <h2>Posts</h2>
-                <h2>Publiés</h2>
-                <h2>Brouillons</h2>
-                <h2>Planifiés</h2>
-                <h2>Corbeille</h2>
+                <h1 id="title">Menu principal</h1>
+                <div id="subtitle">
+                    <h2 class="posts">Posts</h2>
+                    <a href="/index.php?c=article&a=pageArticle"><h2>Publier</h2></a>
+                    <h2>Brouillons</h2>
+                    <h2>Planifiés</h2>
+                    <h2>Corbeille</h2>
+                    <h2 class="posts">Gérer</h2>
+                    <h2>Catégories</h2>
+                </div>
+
             </div>
-            <div class="sidebar">
-                <h2>Gérer</h2>
-                <h2>Catégories</h2>
+
+        {% endblock %}
+
+        {% block content %}
+            <div class="article">
+
             </div>
         {% endblock %}
     </div>
 
-    {% block content %}
-        <div class="article">
 
-        </div>
-    {% endblock %}
 
 
 {% endblock %}

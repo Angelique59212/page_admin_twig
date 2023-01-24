@@ -15,11 +15,31 @@ body {
 
 .container {
     width: 100rem;
+    display: flex;
 }
 
 .sidebar {
+    display: block;
     min-height: 100vh;
     color: white;
     background-color: #313030;
     width: 20rem;
+    padding: 1rem;
+
+    h1, h2 {
+        margin: 2.2rem;
+    }
+
+    #subtitle{
+        margin-top: 8rem;
+    }
+
+    .posts {
+        color: darkgray;
+    }
+}
+
+.article {
+    background-color: #9b4444;
+    width: 80rem;
 }

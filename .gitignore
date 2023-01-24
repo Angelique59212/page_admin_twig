@@ -1,0 +1,4 @@
+/vendor/
+/public/build/
+/.idea/
+/node_modules/
