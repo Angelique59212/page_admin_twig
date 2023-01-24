@@ -41,4 +41,15 @@ class ArticleController extends Controller
             self::index();
         }
     }
+
+    public function editArticle(int $id = null)
+    {
+            $article = R::findOne('article', 'id=?', [$id]);
+            if ($article) {
+                $article->title = ($this->dataClean($this->getFormField('title')));
+                $article->content = ($this->dataClean($this->getFormField('content')));
+                $insert = R::store($article);
+                self::pageArticle();
+            }
+    }
 }

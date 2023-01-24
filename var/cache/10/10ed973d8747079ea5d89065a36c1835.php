@@ -66,7 +66,7 @@ class __TwigTemplate_78ed03409f4e7d264281ecb54b744786 extends Template
         ";
         // line 24
         $this->displayBlock('content', $context, $blocks);
-        // line 38
+        // line 42
         echo "    </div>
 
 
@@ -121,10 +121,17 @@ class __TwigTemplate_78ed03409f4e7d264281ecb54b744786 extends Template
                 // line 30
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "content", [], "any", false, false, false, 30), "html", null, true);
                 echo "</p>
-                            <a id=\"delete\" href=\"index.php?c=article&a=delete-article&id=";
-                // line 31
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 31), "html", null, true);
+                            <div id=\"edit-remove\">
+                                <a id=\"delete\" href=\"index.php?c=article&a=delete-article&id=";
+                // line 32
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 32), "html", null, true);
                 echo "\">Supprimer</a>
+                                <a id=\"edit\" href=\"index.php?c=article&a=edit-article&id=";
+                // line 33
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 33), "html", null, true);
+                echo "\">Editer</a>
+                            </div>
+
 
                         </div>
                     ";
@@ -132,10 +139,10 @@ class __TwigTemplate_78ed03409f4e7d264281ecb54b744786 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 35
+            // line 39
             echo "                ";
         }
-        // line 36
+        // line 40
         echo "            </div>
         ";
     }
@@ -152,7 +159,7 @@ class __TwigTemplate_78ed03409f4e7d264281ecb54b744786 extends Template
 
     public function getDebugInfo()
     {
-        return array (  139 => 36,  136 => 35,  126 => 31,  122 => 30,  118 => 29,  115 => 28,  110 => 27,  108 => 26,  105 => 25,  101 => 24,  83 => 8,  79 => 7,  70 => 38,  68 => 24,  65 => 23,  63 => 7,  60 => 6,  56 => 5,  49 => 3,  38 => 1,);
+        return array (  146 => 40,  143 => 39,  131 => 33,  127 => 32,  122 => 30,  118 => 29,  115 => 28,  110 => 27,  108 => 26,  105 => 25,  101 => 24,  83 => 8,  79 => 7,  70 => 42,  68 => 24,  65 => 23,  63 => 7,  60 => 6,  56 => 5,  49 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -187,7 +194,11 @@ class __TwigTemplate_78ed03409f4e7d264281ecb54b744786 extends Template
                         <div id=\"content-article\">
                             <p>{{ item.title }} </p>
                             <p>{{ item.content }}</p>
-                            <a id=\"delete\" href=\"index.php?c=article&a=delete-article&id={{ item.id }}\">Supprimer</a>
+                            <div id=\"edit-remove\">
+                                <a id=\"delete\" href=\"index.php?c=article&a=delete-article&id={{ item.id }}\">Supprimer</a>
+                                <a id=\"edit\" href=\"index.php?c=article&a=edit-article&id={{ item.id }}\">Editer</a>
+                            </div>
+
 
                         </div>
                     {% endfor %}

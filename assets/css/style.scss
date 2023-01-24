@@ -60,7 +60,13 @@ body {
     margin: 2.5rem;
     padding: vars.$padding;
 
-    #delete {
+    #edit-remove {
+        display: flex;
+        justify-content: space-around;
+        margin: vars.$margin;
+    }
+
+    #delete, #edit {
         margin: vars.$margin;
         text-decoration: none;
         color: gray;

@@ -28,7 +28,11 @@
                         <div id="content-article">
                             <p>{{ item.title }} </p>
                             <p>{{ item.content }}</p>
-                            <a id="delete" href="index.php?c=article&a=delete-article&id={{ item.id }}">Supprimer</a>
+                            <div id="edit-remove">
+                                <a id="delete" href="index.php?c=article&a=delete-article&id={{ item.id }}">Supprimer</a>
+                                <a id="edit" href="index.php?c=article&a=edit-article&id={{ item.id }}">Editer</a>
+                            </div>
+
 
                         </div>
                     {% endfor %}

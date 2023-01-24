@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block title %} Editer l'article {% endblock %}
+
+{% block body %}
+    {% block sidebar %}
+        <div class="sidebar">
+            <a class="title" href="/index.php?c=home&a=home"><h1>Menu principal</h1></a>
+            <div id="subtitle">
+                <h2 class="posts">Posts</h2>
+                <a href="/index.php?c=article&a=pageArticle"><h2>Publier</h2></a>
+                <h2>Brouillons</h2>
+                <h2>Planifiés</h2>
+                <h2>Corbeille</h2>
+                <h2 class="posts">Gérer</h2>
+                <h2>Catégories</h2>
+            </div>
+        </div>
+    {% endblock %}
+
+    <div id="form-editArticle">
+        <form action="/index.php?c=article&a=edit-article&id={{ item.id }}" method="post" id="editArticle"  enctype="multipart/form-data">
+            <div>
+                <label for="title">Titre de l'article</label>
+                <input type="text" name="title" id="title" value="{{ item.title }}" required>
+            </div>
+
+            <div>
+                <label for="editor-content">Contenu</label>
+                <textarea name="content" id="editor-content" cols="40" rows="20">{{ item.content }}</textarea>
+            </div>
+
+            <input type="submit" name="save" value="Valider" class="save">
+        </form>
+    </div>
+{% endblock %}
