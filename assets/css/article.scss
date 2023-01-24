@@ -1,11 +1,14 @@
 body {
+  width:100%;
   background-color: #d5c7c7;
+  display: flex;
+
 }
 
-#form-addArticle {
-  width: 50rem;
-  border: 1px solid #594019;
+form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }

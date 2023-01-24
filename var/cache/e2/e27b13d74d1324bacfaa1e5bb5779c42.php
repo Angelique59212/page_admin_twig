@@ -27,6 +27,7 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'sidebar' => [$this, 'block_sidebar'],
         ];
     }
 
@@ -55,23 +56,47 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
     {
         $macros = $this->macros;
         // line 6
-        echo "    <div id=\"form-addArticle\">
-        <form action=\"/index.php?c=article&a=add-article\" method=\"post\" enctype=\"multipart/form-data\">
-                <div>
-                    <label for=\"title\">Titre de l'article</label>
-                    <input type=\"text\" name=\"title\" id=\"title\">
-                </div>
+        echo "    ";
+        $this->displayBlock('sidebar', $context, $blocks);
+        // line 22
+        echo "
+    <form action=\"/index.php?c=article&a=add-article\" method=\"post\" enctype=\"multipart/form-data\">
 
-            <div>
-                <label class=\"editor\" for=\"content\">Contenu:</label>
-                <textarea name=\"content\" id=\"content\"></textarea>
+        <label for=\"title\">Titre de l'article</label>
+        <input type=\"text\" name=\"title\" id=\"title\">
+
+
+        <label class=\"editor\" for=\"content\">Contenu:</label>
+        <textarea name=\"content\" id=\"content\"></textarea>
+
+
+        <input id=\"btn-addArticle\" type=\"submit\" name=\"save\" value=\"Enregistrer\" class=\"btn btn-secondary\">
+    </form>
+
+
+";
+    }
+
+    // line 6
+    public function block_sidebar($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 7
+        echo "        <div class=\"sidebar\">
+            <h1 id=\"title\">Menu principal</h1>
+            <div id=\"subtitle\">
+                <h2 class=\"posts\">Posts</h2>
+                <a href=\"/index.php?c=article&a=pageArticle\"><h2>Publier</h2></a>
+                <h2>Brouillons</h2>
+                <h2>Planifiés</h2>
+                <h2>Corbeille</h2>
+                <h2 class=\"posts\">Gérer</h2>
+                <h2>Catégories</h2>
             </div>
 
-            <input id=\"btn-addArticle\" type=\"submit\" name=\"save\" value=\"Enregistrer\" class=\"btn btn-secondary\">
-        </form>
+        </div>
 
-    </div>
-";
+    ";
     }
 
     public function getTemplateName()
@@ -86,7 +111,7 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
 
     public function getDebugInfo()
     {
-        return array (  58 => 6,  54 => 5,  47 => 2,  36 => 1,);
+        return array (  85 => 7,  81 => 6,  62 => 22,  59 => 6,  55 => 5,  48 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -96,22 +121,37 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
 
 
 {% block body %}
-    <div id=\"form-addArticle\">
-        <form action=\"/index.php?c=article&a=add-article\" method=\"post\" enctype=\"multipart/form-data\">
-                <div>
-                    <label for=\"title\">Titre de l'article</label>
-                    <input type=\"text\" name=\"title\" id=\"title\">
-                </div>
-
-            <div>
-                <label class=\"editor\" for=\"content\">Contenu:</label>
-                <textarea name=\"content\" id=\"content\"></textarea>
+    {% block sidebar %}
+        <div class=\"sidebar\">
+            <h1 id=\"title\">Menu principal</h1>
+            <div id=\"subtitle\">
+                <h2 class=\"posts\">Posts</h2>
+                <a href=\"/index.php?c=article&a=pageArticle\"><h2>Publier</h2></a>
+                <h2>Brouillons</h2>
+                <h2>Planifiés</h2>
+                <h2>Corbeille</h2>
+                <h2 class=\"posts\">Gérer</h2>
+                <h2>Catégories</h2>
             </div>
 
-            <input id=\"btn-addArticle\" type=\"submit\" name=\"save\" value=\"Enregistrer\" class=\"btn btn-secondary\">
-        </form>
+        </div>
 
-    </div>
+    {% endblock %}
+
+    <form action=\"/index.php?c=article&a=add-article\" method=\"post\" enctype=\"multipart/form-data\">
+
+        <label for=\"title\">Titre de l'article</label>
+        <input type=\"text\" name=\"title\" id=\"title\">
+
+
+        <label class=\"editor\" for=\"content\">Contenu:</label>
+        <textarea name=\"content\" id=\"content\"></textarea>
+
+
+        <input id=\"btn-addArticle\" type=\"submit\" name=\"save\" value=\"Enregistrer\" class=\"btn btn-secondary\">
+    </form>
+
+
 {% endblock %}
 
 ", "article/article.html.twig", "/home/angelika/PhpstormProjects/page_admin_twig/templates/article/article.html.twig");
