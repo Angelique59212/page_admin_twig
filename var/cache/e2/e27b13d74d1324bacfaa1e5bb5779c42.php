@@ -67,7 +67,7 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
 
 
         <label class=\"editor\" for=\"content\">Contenu:</label>
-        <textarea name=\"content\" id=\"content\"></textarea>
+        <textarea name=\"content\" id=\"content\" cols=\"40\" rows=\"20\"></textarea>
 
 
         <input id=\"btn-addArticle\" type=\"submit\" name=\"save\" value=\"Enregistrer\" class=\"btn btn-secondary\">
@@ -83,7 +83,7 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
         $macros = $this->macros;
         // line 7
         echo "        <div class=\"sidebar\">
-            <h1 id=\"title\">Menu principal</h1>
+            <a class=\"title\" href=\"/index.php?c=home&a=home\"><h1>Menu principal</h1></a>
             <div id=\"subtitle\">
                 <h2 class=\"posts\">Posts</h2>
                 <a href=\"/index.php?c=article&a=pageArticle\"><h2>Publier</h2></a>
@@ -123,7 +123,7 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
 {% block body %}
     {% block sidebar %}
         <div class=\"sidebar\">
-            <h1 id=\"title\">Menu principal</h1>
+            <a class=\"title\" href=\"/index.php?c=home&a=home\"><h1>Menu principal</h1></a>
             <div id=\"subtitle\">
                 <h2 class=\"posts\">Posts</h2>
                 <a href=\"/index.php?c=article&a=pageArticle\"><h2>Publier</h2></a>
@@ -145,7 +145,7 @@ class __TwigTemplate_570d4eead0fc37cb765258a0cab1f088 extends Template
 
 
         <label class=\"editor\" for=\"content\">Contenu:</label>
-        <textarea name=\"content\" id=\"content\"></textarea>
+        <textarea name=\"content\" id=\"content\" cols=\"40\" rows=\"20\"></textarea>
 
 
         <input id=\"btn-addArticle\" type=\"submit\" name=\"save\" value=\"Enregistrer\" class=\"btn btn-secondary\">

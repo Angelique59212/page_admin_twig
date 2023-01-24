@@ -6,10 +6,10 @@
     <div class="container">
         {% block sidebar %}
             <div class="sidebar">
-                <h1 id="title">Menu principal</h1>
+                <a class="title" href="/index.php?c=home&a=home"><h1>Menu principal</h1></a>
                 <div id="subtitle">
                     <h2 class="posts">Posts</h2>
-                    <a href="/index.php?c=article&a=pageArticle"><h2>Publier</h2></a>
+                    <a class="title" href="/index.php?c=article&a=pageArticle"><h2>Publier</h2></a>
                     <h2>Brouillons</h2>
                     <h2>Planifiés</h2>
                     <h2>Corbeille</h2>
@@ -25,9 +25,11 @@
             <div class="article">
                 {% if items is defined %}
                     {% for item in items %}
-                        <div>
-                            <p>{{ item.title }}</p>
-                            <p><{{ item.content }}/p>
+                        <div id="content-article">
+                            <p>{{ item.title }} </p>
+                            <p>{{ item.content }}</p>
+                            <a id="delete" href="index.php?c=article&a=delete-article&id={{ item.id }}">Supprimer</a>
+
                         </div>
                     {% endfor %}
                 {% endif %}

@@ -29,6 +29,16 @@ class ArticleController extends Controller
         $insert = R::store($article);
 
         self::index();
+    }
 
+    public function deleteArticle(int $id = null)
+    {
+        $article = R::findOne('article', 'id=?', [$id]);
+
+        if ($article)
+        {
+            R::trash($article);
+            self::index();
+        }
     }
 }

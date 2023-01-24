@@ -1,8 +1,18 @@
+@use "./modules/vars";
+
+* {
+  @extend .reset;
+}
+
 body {
   width:100%;
   background-color: #d5c7c7;
   display: flex;
 
+}
+
+.title {
+  color: white;
 }
 
 form {
@@ -11,4 +21,13 @@ form {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+
+  label {
+    margin: vars.$margin;
+  }
+
+  input {
+    padding: 0.2rem;
+    margin: vars.$margin;
+  }
 }
