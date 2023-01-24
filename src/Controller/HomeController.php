@@ -1,10 +1,16 @@
 <?php
 namespace App\Controller;
 
+use RedBeanPHP\R;
+
 class HomeController extends Controller
 {
     public function home()
     {
-        $this->render('home/home.html.twig');
+        $article = R::findAll('article');
+
+        $this->render('home/home.html.twig', [
+            'items' => $article,
+        ]);
     }
 }

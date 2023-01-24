@@ -23,7 +23,15 @@
 
         {% block content %}
             <div class="article">
+                {% if items is defined %}
+                    {% for item in items %}
+                        <div>
+                            <p>{{ item.title }}</p>
+                            <p><{{ item.content }}/p>
 
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
         {% endblock %}
     </div>

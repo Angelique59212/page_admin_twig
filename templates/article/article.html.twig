@@ -1,20 +1,23 @@
-<div id="title-addArticle">
-    <h1>Ajouter un article</h1>
-</div>
+{% extends 'base.html.twig' %}
+{% block title %} Ajouter un article {% endblock %}
 
-<div id="form-addArticle">
-    <form action="/index.php?c=article&a=add-article" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="title">Titre de l'article</label>
-            <input type="text" name="title" id="title">
-        </div>
 
-        <div>
-            <label class="editor" for="editor">Contenu:</label>
-            <textarea name="content" id="editor-content"></textarea>
-        </div>
+{% block body %}
+    <div id="form-addArticle">
+        <form action="/index.php?c=article&a=add-article" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="title">Titre de l'article</label>
+                <input type="text" name="title" id="title">
+            </div>
 
-        <input id="btn-addArticle" type="submit" name="save" value="Enregistrer" class="btn btn-secondary">
-    </form>
+            <div>
+                <label class="editor" for="content">Contenu:</label>
+                <textarea name="content" id="content"></textarea>
+            </div>
 
-</div>
+            <input id="btn-addArticle" type="submit" name="save" value="Enregistrer" class="btn btn-secondary">
+        </form>
+
+    </div>
+{% endblock %}
+

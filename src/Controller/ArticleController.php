@@ -7,7 +7,11 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $this->render('home/home.html.twig');
+        $article = R::findAll('article');
+
+        $this->render('home/home.html.twig', [
+            'items' => $article,
+        ]);
     }
 
 
